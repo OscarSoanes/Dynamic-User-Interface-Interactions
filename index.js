@@ -1,4 +1,5 @@
 import {buildMenu} from "./elements/navbar.js";
+import {updateImage} from "./elements/updateImage.js";
 
 buildMenu();
 const navbar = document.querySelector("nav");
@@ -14,7 +15,7 @@ navbar.addEventListener("mouseover", (e) => {
   if (target.childNodes.length !== 1 && expanded === false) {
     target.children[0].classList.remove("hidden");
     expanded = true;
-  } else {
+  } else if (expanded === true) {
     expanded = false;
     buildMenu();
   }
@@ -23,3 +24,5 @@ navbar.addEventListener("mouseover", (e) => {
 navbar.addEventListener("mouseleave", () => {
   buildMenu();
 });
+
+updateImage(1);
