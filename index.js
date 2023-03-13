@@ -40,3 +40,9 @@ btnLeft.addEventListener("click", () => {
 btnRight.addEventListener("click", () => {
   updateImage(getIndex() + 1);
 });
+
+const positionalButtons = document.querySelector(".positional-buttons");
+positionalButtons.addEventListener("click", (e) => {
+  const target = e.target.closest("button");
+  updateImage(parseInt(target.getAttribute("index")));
+});
