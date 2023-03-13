@@ -46,3 +46,13 @@ positionalButtons.addEventListener("click", (e) => {
   const target = e.target.closest("button");
   updateImage(parseInt(target.getAttribute("index")));
 });
+
+function changeImage5s() {
+  const currentImage = document.querySelector(".selected");
+  const index = parseInt(currentImage.getAttribute("index"));
+
+  updateImage(index + 1);
+  setTimeout(changeImage5s, 5000);
+}
+
+changeImage5s();
