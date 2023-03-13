@@ -1,6 +1,11 @@
 import {buildMenu} from "./elements/navbar.js";
 import {updateImage} from "./elements/updateImage.js";
 
+function getIndex() {
+  const currentImage = document.querySelector(".selected");
+  return parseInt(currentImage.getAttribute("index"));
+}
+
 buildMenu();
 const navbar = document.querySelector("nav");
 let expanded = false;
@@ -25,4 +30,13 @@ navbar.addEventListener("mouseleave", () => {
   buildMenu();
 });
 
-updateImage(1);
+const btnLeft = document.getElementById("left");
+const btnRight = document.getElementById("right");
+
+btnLeft.addEventListener("click", () => {
+  updateImage(getIndex() - 1);
+});
+
+btnRight.addEventListener("click", () => {
+  updateImage(getIndex() + 1);
+});
