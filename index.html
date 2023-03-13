@@ -4,9 +4,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>User Interactions</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="index.js" type="module"></script>
+    <script src="index.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <h1>Dynamic User Interface Interactions</h1>
+    <h2>Drop-down Menus</h2>
+    <nav>
+      <ul class="menu">
+        <li>Option 1</li>
+        <li>Option 2</li>
+        <li class="drop-down">
+          Settings
+          <ul class="drop-down-opts hidden">
+            <li>Option 1</li>
+            <li>Option 2</li>
+            <li>Option 3</li>
+          </ul>
+        </li>
+        <li>Option 4</li>
+        <li class="drop-down">
+          More Settings
+          <ul class="drop-down-opts hidden">
+            <li>Option 1</li>
+            <li>Option 2</li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </body>
 </html>

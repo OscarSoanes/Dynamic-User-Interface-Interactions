@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+nav {
+    background-color: #2a2a2a;
+    padding: 0.5rem;
+    color: #f2f2f2;
+    font-size: 1.2rem;
+}
+
+
+ul {
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+li {
+    list-style: none;
+    cursor: pointer;
+    position: relative;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+ul.hidden {
+    display: none;
+}
+
+.drop-down-opts {
+    font-size: 1rem;
+    position: absolute;
+    top: 50.5px;
+    display: flex;
+    flex-direction: column;
+    background-color: #7f7f7f;
+    gap: 0;
+}
+
+.drop-down-opts > li {
+    border-bottom: 1px solid #f2f2f2;
+    padding: 0.5rem 0;
+}
