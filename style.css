@@ -1,3 +1,7 @@
+body, html {
+    height: 100%;
+}
+
 body {
     margin: 0;
     font-family: sans-serif;
@@ -44,4 +48,40 @@ ul.hidden {
 .drop-down-opts > li {
     border-bottom: 1px solid #f2f2f2;
     padding: 0.5rem 0;
+}
+
+.image-slider {
+    margin-top: 1rem;
+    display: flex;
+    align-content: flex-end;
+    justify-content: center;
+}
+
+li:hover {
+    font-weight: 700;
+    text-decoration: underline 1px orange;
+}
+
+.image-container.selected {
+    display: block;
+}
+
+.image-container {
+    display: none;
+}
+
+.image-container > img {
+    max-width: 600px;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.location-and-movement, .positional-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.location-and-movement {
+    margin-top: 1rem;
 }
