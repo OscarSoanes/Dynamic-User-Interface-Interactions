@@ -1,10 +1,12 @@
 import {createListElement} from "./list-item.js";
 import {clear} from "./clear.js";
 
+// Creates the navbar to be built, uses a List to create all elements.
 export function buildMenu() {
   const navbar = document.querySelector("nav");
   clear(navbar);
 
+  // List is used to store all the elements in navbar, a object is used if there is a sublist required.
   const list = [
     "Option 1",
     "Option 2",
@@ -16,6 +18,7 @@ export function buildMenu() {
   const navMenu = document.createElement("ul");
   navMenu.classList.add("menu");
 
+  // Creates the elements required, using list. Goes to List Item if there is a sublist.
   list.forEach((element) => {
     const item = document.createElement("li");
     if (typeof element === "object") {

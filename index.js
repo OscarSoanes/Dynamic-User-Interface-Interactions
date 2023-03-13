@@ -10,6 +10,7 @@ navbar.addEventListener("mouseover", (e) => {
     return;
   }
 
+  // Checks the targets children, and also checks if already expanded.
   if (target.childNodes.length !== 1 && expanded === false) {
     target.children[0].classList.remove("hidden");
     expanded = true;
@@ -17,4 +18,8 @@ navbar.addEventListener("mouseover", (e) => {
     expanded = false;
     buildMenu();
   }
+});
+
+navbar.addEventListener("mouseleave", () => {
+  buildMenu();
 });
